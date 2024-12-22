@@ -1,143 +1,147 @@
 # DnsXplorer
 
-**Versão:** 0.1  
-**Autor:** DougSoares  
-**Plataforma recomendada:** Kali Linux
+**Version:** 0.1  
+**Author:** DougSoares  
+**Recommended Platform:** Kali Linux  
 
-## Descrição
+## Description  
 
-DnsXplorer é uma ferramenta poderosa projetada para assistência em testes de segurança, especializada em enumeração de DNS, brute force de subdomínios e diretórios, bem como varredura de portas com Nmap. Com sua interface intuitiva e recursos eficientes, a ferramenta ajuda analistas de segurança a identificar vulnerabilidades em domínios e subdomínios.
+DnsXplorer is a powerful tool designed to assist in security testing, specializing in DNS enumeration, brute force for subdomains and directories, as well as port scanning with Nmap. With its intuitive interface and efficient features, the tool helps security analysts identify vulnerabilities in domains and subdomains.  
 
-## Recursos
+## Features  
 
-- **Enumeração de DNS:**
-  - Consulta de registros A, AAAA, TXT e CNAME.
-  - Identifica se o domínio é inexistente (NXDOMAIN).
+- **DNS Enumeration:**  
+  - Queries A, AAAA, TXT, and CNAME records.  
+  - Identifies if the domain is nonexistent (NXDOMAIN).  
 
-- **Brute Force de Subdomínios:**
-  - Testa subdomínios com base em listas customizáveis ou padrões.
+- **Subdomain Brute Force:**  
+  - Tests subdomains based on customizable or standard wordlists.  
 
-- **Brute Force de Diretórios:**
-  - Verifica acessibilidade de diretórios em subdomínios.
+- **Directory Brute Force:**  
+  - Checks the accessibility of directories on subdomains.  
 
-- **Varredura de Portas com Nmap:**
-  - Identifica portas abertas e serviços associados em IPs de subdomínios encontrados.
+- **Port Scanning with Nmap:**  
+  - Identifies open ports and associated services on the IPs of discovered subdomains.  
 
-- **Exportação de Resultados:**
-  - Salva os resultados em um arquivo JSON para análise posterior.
+- **Export Results:**  
+  - Saves results to a JSON file for later analysis.  
 
-## Requisitos
+## Requirements  
 
-- **Sistema operacional:** Kali Linux (ou qualquer sistema com suporte a Python 3)
-- **Dependências:**
-  - Python 3
-  - Módulos Python: `dns.resolver`, `colorama`, `tqdm`, `requests`, `pyfiglet`
-  - Ferramentas externas: `Nmap`
+- **Operating System:** Kali Linux (or any system supporting Python 3)  
+- **Dependencies:**  
+  - Python 3  
+  - Python modules: `dns.resolver`, `colorama`, `tqdm`, `requests`, `pyfiglet`  
+  - External tools: `Nmap`  
 
-Para instalar as dependências Python, execute:
-```bash
-pip install dnspython colorama tqdm requests pyfiglet
-```
+To install Python dependencies, run:  
+```bash  
+pip install dnspython colorama tqdm requests pyfiglet  
+```  
 
-Certifique-se de que o Nmap está instalado:
-```bash
-sudo apt-get install nmap
-```
-Caso dê algum erro ao instalar as dependências do python considere em usar um ambiente vitual, execute:
-```bash
-sudo apt-get install python3-venv
-python3 -m venv venv
-source venv/bin/activate
-pip install dnspython colorama tqdm requests pyfiglet
-```
-Para desativar o ambiente virtual basta digitar
-```bash
-deactivate
-```
-## Uso
+Ensure Nmap is installed:  
+```bash  
+sudo apt-get install nmap  
+```  
 
-### Executando a Ferramenta
+If there is an error when installing Python dependencies, consider using a virtual environment:  
+```bash  
+sudo apt-get install python3-venv  
+python3 -m venv venv  
+source venv/bin/activate  
+pip install dnspython colorama tqdm requests pyfiglet  
+```  
 
-1. Clone o repositório do GitHub:
-   
-    ```bash
-    git clone https://github.com/DougSoares1/DnsXplorer.git
-    cd DnsXplorer
-    ```
-3. Execute o script:
-   
-    ```bash
-    python3 DnsXplorer.py
-    ```
+To deactivate the virtual environment, run:  
+```bash  
+deactivate  
+```  
 
-### Opções Interativas
-- **Domínio Base:** Informe o domínio que deseja analisar (ex: `https://www.example.com.br/`). o script consegue lidar com endereços completos ou somente o diminio. 
-- **Arquivo de Subdomínios Personalizado:** Caso possua uma wordlist, especifique o caminho do arquivo. Caso contrário, a ferramenta usará uma lista padrão. Ex: `/home/local/wordlist.txt`
-- **Varredura com Nmap:** Escolha se deseja realizar varredura de portas abertas em subdomínios encontrados.
-- **Brute Force de Diretórios:** Informe se deseja realizar brute force em diretórios e, caso positivo, especifique a wordlist a ser utilizada. Ex: `/home/local/wordlist.txt`
+## Usage  
 
-### Resultados
-Os resultados serão exibidos na tela e salvos em um arquivo JSON no formato `<dominio>_results.json`.
+### Running the Tool  
 
-## Exemplo de Saída
-```plaintext
-Principal:
-  example.com -> IPs: 192.168.1.1, 192.168.1.2
-  A: 192.168.1.1
-  AAAA: Nenhum registro encontrado
-  TXT: "v=spf1 include:example.com ~all"
-  NX:  Nenhum registro encontrado
+1. Clone the GitHub repository:  
+   ```bash  
+   git clone https://github.com/DougSoares1/DnsXplorer.git  
+   cd DnsXplorer  
+   ```  
 
-Subdomínios encontrados:
-  Subdomínio encontrado: www.example.com -> IPs: 192.168.1.3
-  A: 192.168.1.3
-  AAAA: Nenhum registro encontrado
-  TXT: "v=spf1 include:example.com ~all"
-  NX:  Nenhum registro encontrado
+2. Run the script:  
+   ```bash  
+   python3 DnsXplorer.py  
+   ```  
 
-Resultados do Nmap por IP:
-  IP: 192.168.1.3
-    Porta: 80, Serviço: http
-    Porta: 443, Serviço: https
+### Interactive Options  
+- **Base Domain:** Enter the domain to analyze (e.g., `https://www.example.com.br/`). The script can handle complete addresses or just the domain name.  
+- **Custom Subdomain Wordlist:** If you have a wordlist, specify its file path. Otherwise, the tool will use a default list. E.g., `/home/local/wordlist.txt`  
+- **Nmap Scanning:** Choose whether to perform open port scanning on discovered subdomains.  
+- **Directory Brute Force:** Indicate if you want to brute force directories and, if so, specify the wordlist to use. E.g., `/home/local/wordlist.txt`  
 
-Diretórios encontrados:
-  Subdomínio: www.example.com
-    [Acessível] http://www.example.com/admin
-    [Acessível] https://www.example.com/login
+### Results  
+Results will be displayed on the screen and saved to a JSON file in the format `<domain>_results.json`.  
 
-Resultados exportados para: example.com_results.json
-```
-## Observações
-Em alguns casos o script pode dar falha ao ser executado no terminal, quando acontece podemos executa-lo em nosso ambiente virtual, execute:
+## Example Output  
+```plaintext  
+Main Domain:  
+  example.com -> IPs: 192.168.1.1, 192.168.1.2  
+  A: 192.168.1.1  
+  AAAA: No records found  
+  TXT: "v=spf1 include:example.com ~all"  
+  NX: No records found  
 
-```bash
-source venv/bin/activate
-cd DnsXplorer
-python3 DnsXplorer.py
-```
-O codigo será executado normalmente, para desativar o ambiente virtual basta executar:
+Discovered Subdomains:  
+  Subdomain found: www.example.com -> IPs: 192.168.1.3  
+  A: 192.168.1.3  
+  AAAA: No records found  
+  TXT: "v=spf1 include:example.com ~all"  
+  NX: No records found  
 
-```bash
-deactivate
-```
-- Ressalto que o script pode demorar levando em conta o tamanho de sua wordlist e também a varredura de IPs, portanto a etapa de varredura e verificação de diretorios pode ser pulada, basta digitar `n`
-- Em breve novas atualizações para melhorias e aceleração do codigo estará disponível
-- Caso goste de outros parâmetros de verredura no `Nmap` basta abrir o codigo em sua maquina e poderá alterar a linha na qual deixei comentada.
+Nmap Results by IP:  
+  IP: 192.168.1.3  
+    Port: 80, Service: http  
+    Port: 443, Service: https  
 
-## Imangens
+Discovered Directories:  
+  Subdomain: www.example.com  
+    [Accessible] http://www.example.com/admin  
+    [Accessible] https://www.example.com/login  
 
-![Captura de tela 2024-12-21 205623](https://github.com/user-attachments/assets/5c945137-df83-4005-a76a-7c0ecb44f635)
-![Captura de tela 2024-12-21 205702](https://github.com/user-attachments/assets/b8c50af9-1b8b-40a8-a952-9455af283c2a)
-![Captura de tela 2024-12-21 205724](https://github.com/user-attachments/assets/9152e173-4460-4a18-8dbf-01dd5f828d10)
+Results exported to: example.com_results.json  
+```  
 
-Observação: O dominio testado é proprio para essa finalidade.
+## Notes  
 
-## Licença
-Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais informações.
+If the script fails to execute in the terminal, try running it in your virtual environment:  
+```bash  
+source venv/bin/activate  
+cd DnsXplorer  
+python3 DnsXplorer.py  
+```  
 
-## Contribuições
-Contribuições são bem-vindas! Se você encontrar problemas ou tiver sugestões de melhorias, abra uma issue ou envie um pull request.
+To deactivate the virtual environment, run:  
+```bash  
+deactivate  
+```  
 
-## Aviso Legal
-Esta ferramenta foi desenvolvida para fins educacionais e de pesquisa. O uso indevido para atividades não autorizadas é estritamente proibido. O autor não se responsabiliza por quaisquer danos causados pelo uso desta ferramenta.
+- Note that the script might take time depending on the size of your wordlist and IP scanning. You can skip the scanning and directory verification steps by typing `n`.  
+- New updates to improve and accelerate the code will be available soon.  
+- If you prefer custom Nmap scanning parameters, you can edit the script locally by modifying the commented line.  
+
+## Images  
+
+![Screenshot 2024-12-21 205623](https://github.com/user-attachments/assets/5c945137-df83-4005-a76a-7c0ecb44f635)  
+![Screenshot 2024-12-21 205702](https://github.com/user-attachments/assets/b8c50af9-1b8b-40a8-a952-9455af283c2a)  
+![Screenshot 2024-12-21 205724](https://github.com/user-attachments/assets/9152e173-4460-4a18-8dbf-01dd5f828d10)  
+
+Note: The tested domain is specifically designed for this purpose.  
+
+## License  
+This project is licensed under the MIT License. See the LICENSE file for more details.  
+
+## Contributions  
+Contributions are welcome! If you find any issues or have suggestions for improvement, open an issue or submit a pull request.  
+
+## Disclaimer  
+This tool was developed for educational and research purposes. Unauthorized use for malicious activities is strictly prohibited. The author is not responsible for any damage caused by the use of this tool.
 
