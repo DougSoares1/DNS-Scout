@@ -128,7 +128,7 @@ Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para m
 ![Captura de tela 2024-12-21 205702](https://github.com/user-attachments/assets/b8c50af9-1b8b-40a8-a952-9455af283c2a)
 ![Captura de tela 2024-12-21 205724](https://github.com/user-attachments/assets/9152e173-4460-4a18-8dbf-01dd5f828d10)
 
-Observação: O dominio testado é proprio para espaço de teste.
+Observação: O dominio testado é proprio para teste.
 
 ## Contribuições
 Contribuições são bem-vindas! Se você encontrar problemas ou tiver sugestões de melhorias, abra uma issue ou envie um pull request.
