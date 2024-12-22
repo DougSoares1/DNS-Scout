@@ -1,3 +1,5 @@
+![Captura de tela 2024-12-21 232004](https://github.com/user-attachments/assets/13e20fb0-929d-42a5-b54c-02ba8f024b85)
+
 # ReconXplorer
 
 **Versão:** 0.1  
