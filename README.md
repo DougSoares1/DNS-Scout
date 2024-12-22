@@ -119,9 +119,6 @@ deactivate
 - Em breve novas atualizações para melhorias e aceleração do codigo estará disponível
 - Caso goste de outros parâmetros de verredura no `nmap` basta abrir o codigo em sua maquina e poderá alterar a linha na qual deixei comentada.
 
-## Licença
-Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais informações.
-
 ## Imangens
 
 ![Captura de tela 2024-12-21 205623](https://github.com/user-attachments/assets/5c945137-df83-4005-a76a-7c0ecb44f635)
@@ -129,6 +126,9 @@ Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para m
 ![Captura de tela 2024-12-21 205724](https://github.com/user-attachments/assets/9152e173-4460-4a18-8dbf-01dd5f828d10)
 
 Observação: O dominio testado é proprio para teste.
+
+## Licença
+Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais informações.
 
 ## Contribuições
 Contribuições são bem-vindas! Se você encontrar problemas ou tiver sugestões de melhorias, abra uma issue ou envie um pull request.
