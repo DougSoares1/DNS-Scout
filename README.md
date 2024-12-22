@@ -32,7 +32,7 @@ DnsXplorer é uma ferramenta poderosa projetada para assistência em testes de s
 - **Dependências:**
   - Python 3
   - Módulos Python: `dns.resolver`, `colorama`, `tqdm`, `requests`, `pyfiglet`
-  - Ferramentas externas: Nmap
+  - Ferramentas externas: `Nmap`
 
 Para instalar as dependências Python, execute:
 ```bash
@@ -57,12 +57,15 @@ deactivate
 ## Uso
 
 ### Executando a Ferramenta
+
 1. Clone o repositório do GitHub:
+   
     ```bash
     git clone https://github.com/DougSoares1/DnsXplorer.git
     cd DnsXplorer
     ```
-2. Execute o script:
+3. Execute o script:
+   
     ```bash
     python3 DnsXplorer.py
     ```
@@ -106,18 +109,20 @@ Resultados exportados para: example.com_results.json
 ```
 ## Observações
 Em alguns casos o script pode dar falha ao ser executado no terminal, quando acontece podemos executa-lo em nosso ambiente virtual, execute:
+
 ```bash
 source venv/bin/activate
 cd DnsXplorer
 python3 DnsXplorer.py
 ```
-O codigo será executado normalmente, para desativar o ambiente virtual basta executar
+O codigo será executado normalmente, para desativar o ambiente virtual basta executar:
+
 ```bash
 deactivate
 ```
 - Resalto que o script pode demorar levando em conta o tamnho de sua wordlist e também a varredura, portanto a etapa de varredura e verificação de diretorios pode ser pulada, basta digitar `n`
 - Em breve novas atualizações para melhorias e aceleração do codigo estará disponível
-- Caso goste de outros parâmetros de verredura no `nmap` basta abrir o codigo em sua maquina e poderá alterar a linha na qual deixei comentada.
+- Caso goste de outros parâmetros de verredura no `Nmap` basta abrir o codigo em sua maquina e poderá alterar a linha na qual deixei comentada.
 
 ## Imangens
 
@@ -125,7 +130,7 @@ deactivate
 ![Captura de tela 2024-12-21 205702](https://github.com/user-attachments/assets/b8c50af9-1b8b-40a8-a952-9455af283c2a)
 ![Captura de tela 2024-12-21 205724](https://github.com/user-attachments/assets/9152e173-4460-4a18-8dbf-01dd5f828d10)
 
-Observação: O dominio testado é proprio para teste.
+Observação: O dominio testado é proprio para essa finalidade.
 
 ## Licença
 Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais informações.
