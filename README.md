@@ -1,4 +1,4 @@
-# ReconXplorer
+# DnsXplorer
 
 **Versão:** 0.1  
 **Autor:** DougSoares  
@@ -6,7 +6,7 @@
 
 ## Descrição
 
-DNS Scout é uma ferramenta poderosa projetada para assistência em testes de segurança, especializada em enumeração de DNS, brute force de subdomínios e diretórios, bem como varredura de portas com Nmap. Com sua interface intuitiva e recursos eficientes, a ferramenta ajuda analistas de segurança a identificar vulnerabilidades em domínios e subdomínios.
+DnsXplorer é uma ferramenta poderosa projetada para assistência em testes de segurança, especializada em enumeração de DNS, brute force de subdomínios e diretórios, bem como varredura de portas com Nmap. Com sua interface intuitiva e recursos eficientes, a ferramenta ajuda analistas de segurança a identificar vulnerabilidades em domínios e subdomínios.
 
 ## Recursos
 
@@ -59,12 +59,12 @@ deactivate
 ### Executando a Ferramenta
 1. Clone o repositório do GitHub:
     ```bash
-    git clone https://github.com/DougSoares1/ReconXplorer.git
-    cd ReconXplorer
+    git clone https://github.com/DougSoares1/DnsXplorer.git
+    cd DnsXplorer
     ```
 2. Execute o script:
     ```bash
-    python3 ReconXplorer.py
+    python3 DnsXplorer.py
     ```
 
 ### Opções Interativas
@@ -108,8 +108,8 @@ Resultados exportados para: example.com_results.json
 Em alguns casos o script pode dar falha ao ser executado no terminal, quando acontece podemos executa-lo em nosso ambiente virtual, execute:
 ```bash
 source venv/bin/activate
-cd ReconXplorer
-python3 ReconXplorer.py
+cd DnsXplorer
+python3 DnsXplorer.py
 ```
 O codigo será executado normalmente, para desativar o ambiente virtual basta executar
 ```bash
@@ -123,7 +123,7 @@ Caso goste de outros parâmetros de verredura no nmap basta abrir o codigo em su
 Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais informações.
 
 ## Imangens
-![Captura de tela 2024-12-22 012549](https://github.com/user-attachments/assets/95347736-f863-4356-a42e-d96c29faa9d1)
+
 ![Captura de tela 2024-12-21 205623](https://github.com/user-attachments/assets/5c945137-df83-4005-a76a-7c0ecb44f635)
 ![Captura de tela 2024-12-21 205702](https://github.com/user-attachments/assets/b8c50af9-1b8b-40a8-a952-9455af283c2a)
 ![Captura de tela 2024-12-21 205724](https://github.com/user-attachments/assets/9152e173-4460-4a18-8dbf-01dd5f828d10)
