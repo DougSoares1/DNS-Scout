@@ -43,14 +43,24 @@ Certifique-se de que o Nmap está instalado:
 ```bash
 sudo apt-get install nmap
 ```
-
+Caso dê algum erro ao instalar as dependencias do python considere em usar um abiente vitual, execute:
+```bash
+sudo apt-get install python3-venv
+python3 -m venv venv
+source venv/bin/activate
+pip install dnspython colorama tqdm requests pyfiglet
+```
+Para desativar basta digitar
+```bash
+deactivate
+```
 ## Uso
 
 ### Executando a Ferramenta
 1. Clone o repositório do GitHub:
     ```bash
-    git clone https://github.com/seu_usuario/dns-scout.git
-    cd dns-scout
+    git clone https://github.com/seu_usuario/ReconXplorer.git
+    cd ReconXplorer
     ```
 2. Execute o script:
     ```bash
