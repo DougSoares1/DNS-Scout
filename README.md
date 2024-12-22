@@ -104,9 +104,31 @@ Diretórios encontrados:
 
 Resultados exportados para: example.com_results.json
 ```
+## Observações
+Em alguns casos o script pode dar falha ao ser executado no terminal, quando acontece podemos executa-lo em nosso ambiente virtual, execute:
+```bash
+source venv/bin/activate
+cd ReconXplorer
+python3 ReconXplorer.py
+```
+O codigo será executado normalmente, para desativar o ambiente virtual basta executar
+```bash
+deactivate
+```
+Resalto que o script pode demorar levando em conta o tamnho de sua wordlist e também a varredura, portanto a etapa de varredura e verificação de diretorios pode ser pulada, basta digitar `n`
+Em breve novas atualizações para melhorias e aceleração do codigo estará disponível 
+Caso goste de outros parâmetros de verredura no nmap basta abrir o codigo em sua maquina e poderá alterar a linha na qual deixei comentada.
 
 ## Licença
 Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais informações.
+
+## Imangens
+![Captura de tela 2024-12-22 012549](https://github.com/user-attachments/assets/95347736-f863-4356-a42e-d96c29faa9d1)
+![Captura de tela 2024-12-21 205623](https://github.com/user-attachments/assets/5c945137-df83-4005-a76a-7c0ecb44f635)
+![Captura de tela 2024-12-21 205702](https://github.com/user-attachments/assets/b8c50af9-1b8b-40a8-a952-9455af283c2a)
+![Captura de tela 2024-12-21 205724](https://github.com/user-attachments/assets/9152e173-4460-4a18-8dbf-01dd5f828d10)
+
+Observação: O dominio testado é proprio para espaço de teste.
 
 ## Contribuições
 Contribuições são bem-vindas! Se você encontrar problemas ou tiver sugestões de melhorias, abra uma issue ou envie um pull request.
