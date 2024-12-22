@@ -43,14 +43,14 @@ Certifique-se de que o Nmap está instalado:
 ```bash
 sudo apt-get install nmap
 ```
-Caso dê algum erro ao instalar as dependencias do python considere em usar um abiente vitual, execute:
+Caso dê algum erro ao instalar as dependências do python considere em usar um ambiente vitual, execute:
 ```bash
 sudo apt-get install python3-venv
 python3 -m venv venv
 source venv/bin/activate
 pip install dnspython colorama tqdm requests pyfiglet
 ```
-Para desativar o ambiente virtuak basta digitar
+Para desativar o ambiente virtual basta digitar
 ```bash
 deactivate
 ```
