@@ -1,4 +1,4 @@
-# DNS Scout
+# ReconXplorer
 
 **Versão:** 0.1  
 **Autor:** DougSoares  
@@ -73,11 +73,14 @@ Principal:
   A: 192.168.1.1
   AAAA: Nenhum registro encontrado
   TXT: "v=spf1 include:example.com ~all"
+  NX:  Nenhum registro encontrado
 
 Subdomínios encontrados:
   Subdomínio encontrado: www.example.com -> IPs: 192.168.1.3
-    A: 192.168.1.3
-    CNAME: Nenhum registro encontrado
+  A: 192.168.1.3
+  AAAA: Nenhum registro encontrado
+  TXT: "v=spf1 include:example.com ~all"
+  NX:  Nenhum registro encontrado
 
 Resultados do Nmap por IP:
   IP: 192.168.1.3
