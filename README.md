@@ -50,7 +50,7 @@ python3 -m venv venv
 source venv/bin/activate
 pip install dnspython colorama tqdm requests pyfiglet
 ```
-Para desativar basta digitar
+Para desativar o ambiente virtuak basta digitar
 ```bash
 deactivate
 ```
