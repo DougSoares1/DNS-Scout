@@ -21,7 +21,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Exibir o banner
 def display_banner():
-    banner = pyfiglet.figlet_format("ReconXplorer")
+    banner = pyfiglet.figlet_format("DnsXplorer")
     print(f"{Fore.CYAN}{Style.BRIGHT}{banner}")
     print(f"{Fore.YELLOW}{Style.NORMAL}by: DougSoares V: 0.1\n")
 
