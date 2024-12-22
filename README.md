@@ -120,7 +120,7 @@ O codigo será executado normalmente, para desativar o ambiente virtual basta ex
 ```bash
 deactivate
 ```
-- Resalto que o script pode demorar levando em conta o tamnho de sua wordlist e também a varredura, portanto a etapa de varredura e verificação de diretorios pode ser pulada, basta digitar `n`
+- Ressalto que o script pode demorar levando em conta o tamanho de sua wordlist e também a varredura de IPs, portanto a etapa de varredura e verificação de diretorios pode ser pulada, basta digitar `n`
 - Em breve novas atualizações para melhorias e aceleração do codigo estará disponível
 - Caso goste de outros parâmetros de verredura no `Nmap` basta abrir o codigo em sua maquina e poderá alterar a linha na qual deixei comentada.
 
