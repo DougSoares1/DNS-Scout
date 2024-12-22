@@ -59,19 +59,19 @@ deactivate
 ### Executando a Ferramenta
 1. Clone o repositório do GitHub:
     ```bash
-    git clone https://github.com/seu_usuario/ReconXplorer.git
+    git clone https://github.com/DougSoares1/ReconXplorer.git
     cd ReconXplorer
     ```
 2. Execute o script:
     ```bash
-    python3 dns_scout.py
+    python3 ReconXplorer.py
     ```
 
 ### Opções Interativas
-- **Domínio Base:** Informe o domínio que deseja analisar (ex: `example.com`).
-- **Arquivo de Subdomínios Personalizado:** Caso possua uma wordlist, especifique o caminho do arquivo. Caso contrário, a ferramenta usará uma lista padrão.
+- **Domínio Base:** Informe o domínio que deseja analisar (ex: `https://www.example.com.br/`). o script consegue lidar com endereços completos ou somente o diminio. 
+- **Arquivo de Subdomínios Personalizado:** Caso possua uma wordlist, especifique o caminho do arquivo. Caso contrário, a ferramenta usará uma lista padrão. Ex: `/home/local/wordlist.txt`
 - **Varredura com Nmap:** Escolha se deseja realizar varredura de portas abertas em subdomínios encontrados.
-- **Brute Force de Diretórios:** Informe se deseja realizar brute force em diretórios e, caso positivo, especifique a wordlist a ser utilizada.
+- **Brute Force de Diretórios:** Informe se deseja realizar brute force em diretórios e, caso positivo, especifique a wordlist a ser utilizada. Ex: `/home/local/wordlist.txt`
 
 ### Resultados
 Os resultados serão exibidos na tela e salvos em um arquivo JSON no formato `<dominio>_results.json`.
