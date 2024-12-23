@@ -159,7 +159,7 @@ def brute_force_directories(subdomains, wordlist):
             return (url, 'Erro ao acessar')
 
     for subdomain, ips in subdomains.items():
-        with ThreadPoolExecutor(max_workers=10) as executor:
+        with ThreadPoolExecutor(max_workers=200) as executor:
             # Tentando tanto http quanto https
             urls = [f"http://{subdomain}/{word.strip()}" for word in wordlist] + [f"https://{subdomain}/{word.strip()}" for word in wordlist]
             results = list(tqdm(executor.map(check_directory, urls), total=len(urls), desc=f"Diretórios ({subdomain})", ncols=100))
@@ -190,7 +190,8 @@ def display_results_ips(base_domain, base_ips, found_subdomains, nmap_results=No
     # Subdomínios e registros DNS
     print(f"\n{Fore.YELLOW}{Style.BRIGHT}Subdomínios encontrados:")
     for subdomain, ips in found_subdomains.items():
-        print(f"  {Fore.GREEN}Subdomínio encontrado: {subdomain} -> IPs: {', '.join(ips)}")
+        print()
+        print(f"  {Fore.CYAN}{Style.BRIGHT}Subdomínio encontrado: {subdomain} -> IPs: {', '.join(ips)}")
         
         # Enumeração dos registros DNS para cada subdomínio
         subdomain_dns_results = dns_lookup_extended(subdomain)
