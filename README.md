@@ -109,6 +109,9 @@ Discovered Directories:
 
 Results exported to: example.com_results.json  
 ```  
+## Update notes
+
+  Working on new features and improvements, coming soon.
 
 ## Notes  
 
