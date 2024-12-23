@@ -132,7 +132,8 @@ deactivate
   ```
   from `200` to up to `500.`
 - New updates to improve and accelerate the code will be available soon.  
-- If you prefer custom Nmap scanning parameters, you can edit the script locally by modifying the commented line.  
+- If you prefer custom Nmap scanning parameters, you can edit the script locally by modifying the commented line.
+- The current script is capable of performing fuzzing on directories, files, and extensions. Simply add them to your wordlist and pass it to the directory verification section. The script is already being updated to display these outputs separately, making it more user-friendly.
 
 ## Images  
 ![Captura de tela 2024-12-22 225410](https://github.com/user-attachments/assets/eaae4ed8-5ffc-4068-90bc-bdbeaf4eda57)
