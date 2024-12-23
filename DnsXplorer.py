@@ -222,14 +222,37 @@ def display_results_ips(base_domain, base_ips, found_subdomains, nmap_results=No
 
 # Exportar os resultados para um arquivo JSON
 def save_results_to_json(base_domain, base_ips, found_subdomains, nmap_results=None, directory_results=None):
+    # Obter registros DNS do domínio principal
+    base_dns_records = dns_lookup_extended(base_domain)
+
+    # Estrutura inicial de resultados
     results = {
-        "base_domain": base_domain,
-        "dns_records": dns_lookup_extended(base_domain),
-        "base_ips": base_ips,
-        "found_subdomains": found_subdomains,
-        "nmap_results": nmap_results,
-        "directory_results": directory_results
+        "base_domain": {
+            "name": base_domain,
+            "dns_records": base_dns_records,
+            "ips": base_ips if base_ips else "Nenhum registro encontrado"
+        },
+        "subdomains": {},
+        "nmap_results": nmap_results if nmap_results else "Nenhum resultado do Nmap",
+        "directory_results": {}
     }
+
+    # Adicionar registros DNS para cada subdomínio
+    for subdomain, ips in found_subdomains.items():
+        subdomain_dns_records = dns_lookup_extended(subdomain)
+        results["subdomains"][subdomain] = {
+            "ips": ips,
+            "dns_records": subdomain_dns_records
+        }
+
+    # Adicionar resultados de diretórios
+    if directory_results:
+        for subdomain, directories in directory_results.items():
+            results["directory_results"][subdomain] = [
+                {"url": directory, "status": status} for directory, status in directories
+            ]
+    else:
+        results["directory_results"] = "Nenhum resultado de diretórios"
 
     # Caminho para o arquivo de resultados
     output_file = f"{base_domain}_results.json"
