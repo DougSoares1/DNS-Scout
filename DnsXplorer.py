@@ -224,6 +224,7 @@ def display_results_ips(base_domain, base_ips, found_subdomains, nmap_results=No
 def save_results_to_json(base_domain, base_ips, found_subdomains, nmap_results=None, directory_results=None):
     results = {
         "base_domain": base_domain,
+        "dns_records": dns_lookup_extended(base_domain),
         "base_ips": base_ips,
         "found_subdomains": found_subdomains,
         "nmap_results": nmap_results,
