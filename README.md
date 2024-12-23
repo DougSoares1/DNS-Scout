@@ -111,7 +111,7 @@ Results exported to: example.com_results.json
 ```  
 ## Update notes
 
-  Working on new features and improvements, coming soon.
+  - Working on new features and improvements, coming soon.
 
 ## Notes  
 
@@ -134,7 +134,6 @@ deactivate
       with ThreadPoolExecutor(max_workers=200)
   ```
   from `200` to up to `500.`
-- New updates to improve and accelerate the code will be available soon.  
 - If you prefer custom Nmap scanning parameters, you can edit the script locally by modifying the commented line.
 - The current script is capable of performing fuzzing on directories, files, and extensions. Simply add them to your wordlist and pass it to the directory verification section. The script is already being updated to display these outputs separately, making it more user-friendly.
 
