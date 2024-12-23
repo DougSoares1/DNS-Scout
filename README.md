@@ -124,15 +124,23 @@ To deactivate the virtual environment, run:
 deactivate  
 ```  
 
-- Note that the script might take time depending on the size of your wordlist and IP scanning. You can skip the scanning and directory verification steps by typing `n`.  
+- Note that the script might take time depending on the size of your wordlist and IP scanning. You can skip the scanning and directory verification steps by typing `n`.
+- If you're using a large wordlist and your machine has sufficient processing power, you can modify the line
+  
+  ```bash
+      with ThreadPoolExecutor(max_workers=200)
+  ```
+  from `200` to up to `500.`
 - New updates to improve and accelerate the code will be available soon.  
 - If you prefer custom Nmap scanning parameters, you can edit the script locally by modifying the commented line.  
 
 ## Images  
+![Captura de tela 2024-12-22 225410](https://github.com/user-attachments/assets/eaae4ed8-5ffc-4068-90bc-bdbeaf4eda57)
+![Captura de tela 2024-12-22 225436](https://github.com/user-attachments/assets/92ae659f-7144-4709-a1e7-4ef8784619d7)
+![Captura de tela 2024-12-22 225507](https://github.com/user-attachments/assets/4de975fa-3dd0-408c-9947-5da03cd07111)
+![Captura de tela 2024-12-22 225533](https://github.com/user-attachments/assets/10362e57-92af-4d12-8341-726df3f25d99)
 
-![Screenshot 2024-12-21 205623](https://github.com/user-attachments/assets/5c945137-df83-4005-a76a-7c0ecb44f635)  
-![Screenshot 2024-12-21 205702](https://github.com/user-attachments/assets/b8c50af9-1b8b-40a8-a952-9455af283c2a)  
-![Screenshot 2024-12-21 205724](https://github.com/user-attachments/assets/9152e173-4460-4a18-8dbf-01dd5f828d10)  
+
 
 Note: The tested domain is specifically designed for this purpose.  
 
